@@ -5,18 +5,13 @@ import logging
 import os
 import re
 import shutil
-import sys
-
-sys.path.insert(0, os.path.dirname(os.path.abspath(os.path.join(__file__, os.pardir))))
 from allennlp.commands.train import train_model_from_file
-
-import allennlp_rc
-
 
 logger = logging.getLogger(__name__)
 
 
 def train_fixture(config_prefix: str) -> None:
+    import allennlp_rc  # Needed for registrables
     config_file = config_prefix + "experiment.json"
     serialization_dir = config_prefix + "serialization"
     # Train model doesn't like it if we have incomplete serialization
