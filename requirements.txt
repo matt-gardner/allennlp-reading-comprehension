@@ -1,5 +1,5 @@
 # To be changed to allennlp>=1.0 once that's released.
-git+https://github.com/allenai/allennlp.git@9799e48991dac848a8e3081e493199630e7e3112
+git+https://github.com/allenai/allennlp.git@644db4998487580fa054d28c32ad3dd8622ad6cb
 
 word2number>=1.1
 py-rouge==1.1
