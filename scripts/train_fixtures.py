@@ -12,6 +12,7 @@ logger = logging.getLogger(__name__)
 
 def train_fixture(config_prefix: str) -> None:
     import allennlp_rc  # noqa F401: Needed to register the registrables.
+
     config_file = config_prefix + "experiment.json"
     serialization_dir = config_prefix + "serialization"
     # Train model doesn't like it if we have incomplete serialization
